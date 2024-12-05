@@ -5,8 +5,8 @@ use std::thread;
 
 fn run(number: i32, before_string: String) {
     let mut file = File::create(format!("{}_output.txt", number)).unwrap();
-    let f: i64 = 10000000000000;
-    for i in 0..f {
+    for i in 0..i64::MAX {
+
         let mut hasher = Md5::new();
         let a = format!("{}{:x}", before_string, i);
 
@@ -16,16 +16,18 @@ fn run(number: i32, before_string: String) {
         let b = format!("{:x}", i);
         let c: Vec<char> = format!("{:x}", result).chars().collect();
 
-        let mut i = 0;
+        let mut j = 0;
         let mut found = true;
+
         for x in b.chars() {
-            if c[i] != x {
+            if c[j] != x {
                 found = false;
             }
-            i += 1;
+            j += 1;
         }
+
         if found {
-            println!("MD5({}) = {:x}", a, result);
+            println!("MD5({}) = {:x}, and {} hashes checked for thread {}", a, result, i, number);
             let d: &str = &format!("MD5({}) = {:x}\n", a, result);
             file.write(d.as_bytes());
         }
@@ -40,15 +42,13 @@ fn main() -> std::io::Result<()> {
         "Jake's MD5 hash = ",
         "Jake's hash: ",
         "Jake's hash = ",
-        "Silly hash = ",
-        "Silly hash: ",
-        "Silly MD5 hash = ",
-        "Silly MD5 hash: ",
-        "silly MD5 hash = ",
-        "silly MD5 hash: ",
+        "Jake's self-referential MD5 hash: ",
+        "Jake's self-referential MD5 hash = ",
+        "Jake's self-referential hash: ",
+        "Jake's self-referential hash = ",
     ];
 
-    for i in 0..9 {
+    for i in 0..7 {
         let c = strings[i as usize].to_string();
 
         let handle = thread::spawn(move || {
