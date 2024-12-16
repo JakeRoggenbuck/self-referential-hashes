@@ -1,4 +1,5 @@
 # Self Referential Hashes
+[![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)](https://github.com/JakeRoggenbuck?tab=repositories&q=&type=&language=rust&sort=stargazers)
 
 #️⃣ This program finds strings that include parts of hashes H, that when hashed, the output hash starts with H.
 
