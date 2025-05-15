@@ -1,5 +1,7 @@
-MD5(Jake's self-referential MD5 hash: 64) = 649b9959dfe94a575c36ac288c20c7c4
-MD5(Jake's self-referential MD5 hash: 9fc) = 9fc78e6724ceaf844bc3ca705ca4dd04
-MD5(Jake's self-referential MD5 hash: 71cc) = 71ccb1ea6956e3f5dfe6b693ef48fd4c
-MD5(Jake's self-referential MD5 hash: 327b4) = 327b4af040958cd9818b4d6bd1347d3c
-MD5(Jake's self-referential MD5 hash: 6543c2) = 6543c2b35f1fb03e342bfb5ba35b7a8a
+MD5(Jake composed this string to produce an MD5 hash that starts with 2) = 28cbdffe7cc36e419df918da23e59749
+MD5(Jake composed this string to produce an MD5 hash that starts with d) = df1bf075f30ea7d5ea5af14ee6bd609f
+MD5(Jake composed this string to produce an MD5 hash that starts with 6b) = 6bb0a23a572befefe0e5a372168875b3
+MD5(Jake composed this string to produce an MD5 hash that starts with c4) = c4a9e6740243592ff1a2139320b47ccd
+MD5(Jake composed this string to produce an MD5 hash that starts with 2e1) = 2e192c0c89291cd9a4a10b40ef06faac
+MD5(Jake composed this string to produce an MD5 hash that starts with 2402) = 2402eb2477f0b55df3c1d6877f3b93aa
+MD5(Jake composed this string to produce an MD5 hash that starts with 9cd07e) = 9cd07e08ff566e7cb82ff7b0b1162a62

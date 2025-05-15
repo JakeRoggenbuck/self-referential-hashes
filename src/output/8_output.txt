@@ -1,7 +1,0 @@
-MD5(silly MD5 hash = 64) = 6483c0970d750be3a18195c74ca5c5ab
-MD5(silly MD5 hash = 8f) = 8f5ed0839cb018ff0ae7df9b0ac64621
-MD5(silly MD5 hash = 2f6) = 2f68943279487b7ca1844577089ddaad
-MD5(silly MD5 hash = edf) = edf40b1ebb44e855e74eeaca6bce1ee9
-MD5(silly MD5 hash = 738186) = 738186c6dbe93a3fdcd57ac15433dd8e
-MD5(silly MD5 hash = bd061a) = bd061a5730aaf9a46471c7c28aedfc81
-MD5(silly MD5 hash = 1480d25) = 1480d25491454ce5f3e5a330a7655056

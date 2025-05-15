@@ -1,8 +1,9 @@
-MD5(Jake's MD5 hash = d403) = d40354c35fcf2535feace385a60d8103
-MD5(Jake's MD5 hash = e250d) = e250d6d960e701a03252be03c888504d
-MD5(Jake's MD5 hash = 1ef4b1) = 1ef4b140f96f91c6f8ff11d8bd90ab2b
-MD5(Jake's MD5 hash = 6120ad) = 6120adcaf133f6f39b398c0f3f033933
-MD5(Jake's MD5 hash = 2556214) = 255621480cdcdfb284af94a309efec6a
-MD5(Jake's MD5 hash = 4fde222) = 4fde2223f25e5fb93f46d1379d511b9c
-MD5(Jake's MD5 hash = a9f4ee3f) = a9f4ee3f08c06f11014552df01ec67b8
-MD5(Jake's MD5 hash = 109e5a72e) = 109e5a72eea4eaa2c1bf94edcecb2fb0
+MD5(Jake crafted this message so its MD5 hash starts with 3) = 3f35b5f415e6ec4a899a0e835460a4e6
+MD5(Jake crafted this message so its MD5 hash starts with a) = abe53515b98f973daf4e44c62f26ed82
+MD5(Jake crafted this message so its MD5 hash starts with e) = e09954138550b532876ba62f44f07892
+MD5(Jake crafted this message so its MD5 hash starts with f) = f7a421ef8ccb854db31904d1f20a6cf7
+MD5(Jake crafted this message so its MD5 hash starts with 4f5) = 4f5a92423d6c4261be87c9994b8b0f0f
+MD5(Jake crafted this message so its MD5 hash starts with 7c16) = 7c16f97a486733f83ca7a3ef820c081a
+MD5(Jake crafted this message so its MD5 hash starts with f611d) = f611d2d16975eeb72fca8e93bece5ebf
+MD5(Jake crafted this message so its MD5 hash starts with 93625a) = 93625a8fdb25da512d4f42643986dcae
+MD5(Jake crafted this message so its MD5 hash starts with ec356d) = ec356de1373b62fffad1e00a48af4a32

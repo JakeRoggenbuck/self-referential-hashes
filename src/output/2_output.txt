@@ -1,7 +1,5 @@
-MD5(Jake's hash: 4) = 4c50a0515b8b993c8cc9774e21b4fa30
-MD5(Jake's hash: e) = e7eaab35645f63833561ac715a0c1559
-MD5(Jake's hash: 53) = 536713df1e1713e645dd197e955da1a6
-MD5(Jake's hash: 56) = 56972c437d670f6a80d3eb4debb5d269
-MD5(Jake's hash: b4) = b453576b28f1baf863adc9d7e9104874
-MD5(Jake's hash: e6) = e60da0b3c0756c7abcff37cd977e7cfb
-MD5(Jake's hash: eac4e9) = eac4e95a7cef70e80ae68d97abd0d377
+MD5(This sentence, written by Jake, has an MD5 hash beginning with 65d) = 65d70675a1e3054255c1c33d850e1543
+MD5(This sentence, written by Jake, has an MD5 hash beginning with f8f) = f8f88a46608b3dadcc322e18bd1cadaf
+MD5(This sentence, written by Jake, has an MD5 hash beginning with 26dec) = 26dec954dcf2ac1f2b4251a9f2376726
+MD5(This sentence, written by Jake, has an MD5 hash beginning with f84ee) = f84eeb58df6b99e25fee723ccb095212
+MD5(This sentence, written by Jake, has an MD5 hash beginning with 62b152) = 62b152b29bf0c3037745cd8fc22962a2

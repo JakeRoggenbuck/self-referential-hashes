@@ -1,2 +1,0 @@
-MD5(Silly MD5 hash: 43ca) = 43ca4d34a4d9fb1b458d4b7c477a565b
-MD5(Silly MD5 hash: e2be) = e2be1f33400492c94eb9ebb5fa10b69e

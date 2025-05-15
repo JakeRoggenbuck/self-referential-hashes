@@ -1,6 +1,4 @@
-MD5(Jake's hash = 287919) = 28791943aaaf1e492877e70e45bbe4fa
-MD5(Jake's hash = 92db32) = 92db325369e8b7f516619977240e3960
-MD5(Jake's hash = 251b612) = 251b61256e56a49782b26d8c0c049a69
-MD5(Jake's hash = 427d796) = 427d7961908adefa742562df4cb0384f
-MD5(Jake's hash = 8987fcc) = 8987fcc86cd74f79ddf4bdeafcfefc53
-MD5(Jake's hash = da0e8c5) = da0e8c5b0042d5434a2355a3734734fb
+MD5(The MD5 hash of this Jake-authored text begins with e) = e0264256213f1a3e340a35407385a49d
+MD5(The MD5 hash of this Jake-authored text begins with f) = fc326bf75928a971d71a5fe92efc8718
+MD5(The MD5 hash of this Jake-authored text begins with 6d400) = 6d400e1b48801087f79be76e673d66ed
+MD5(The MD5 hash of this Jake-authored text begins with 334c98) = 334c98e0825c509b552d9c29ca2f6b8b

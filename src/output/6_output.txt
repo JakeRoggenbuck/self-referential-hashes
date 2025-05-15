@@ -1,5 +1,6 @@
-MD5(Jake's self-referential hash: 566e) = 566ed18e1bcacc54f13fad7ca68e1f76
-MD5(Jake's self-referential hash: b8d94) = b8d949580e64b154dd6dfdc643bf7929
-MD5(Jake's self-referential hash: 14ccd0) = 14ccd098514138174b3561f52036f226
-MD5(Jake's self-referential hash: dcd0534) = dcd053459153f169f39387a4ba41cb6b
-MD5(Jake's self-referential hash: da8aeffb) = da8aeffb07c62f758e683f5026faff35
+MD5(Written by Jake, this message’s MD5 hash begins with 2) = 20fd09fa8805e88fedcf968852f66567
+MD5(Written by Jake, this message’s MD5 hash begins with d) = dafc9b4013fe6a03766196cd807ee16c
+MD5(Written by Jake, this message’s MD5 hash begins with 5b) = 5b1bb0e4565907c17cc50f5938ff4b7d
+MD5(Written by Jake, this message’s MD5 hash begins with 625) = 62586c76b915fbcbb72cc4556fb155bb
+MD5(Written by Jake, this message’s MD5 hash begins with 88ece) = 88ece14fa97fbddbe23c180fb948b450
+MD5(Written by Jake, this message’s MD5 hash begins with 766355) = 766355d3a4ab5b36ba4a6cb24b492bf1

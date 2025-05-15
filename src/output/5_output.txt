@@ -1,8 +1,9 @@
-MD5(Jake's self-referential MD5 hash = 1) = 18e70af2e4a911ac238dbba51f4fc975
-MD5(Jake's self-referential MD5 hash = d) = d3f7cf504cded9326b4bab37cbf430aa
-MD5(Jake's self-referential MD5 hash = e) = e15f06cf97677cb3f67a9b63efc5b42a
-MD5(Jake's self-referential MD5 hash = 9a) = 9abbfc46086f31a76c40c342df76336e
-MD5(Jake's self-referential MD5 hash = cd) = cdd925b29fa1fee6e6eda0bd0726a2e1
-MD5(Jake's self-referential MD5 hash = 6d7) = 6d7c7613e74b9e4accbd623c4074ff2a
-MD5(Jake's self-referential MD5 hash = 150fc05) = 150fc057bda771bc0be1c35e1d67a196
-MD5(Jake's self-referential MD5 hash = d0f0370) = d0f037056ca31ab581cad53cff21637f
+MD5(This string, designed by Jake, yields an MD5 hash starting with 8) = 8de6bb9a37be8aac0f2d6c3f2bf2c86b
+MD5(This string, designed by Jake, yields an MD5 hash starting with a) = a3582e47ee44faea807879663dabac5c
+MD5(This string, designed by Jake, yields an MD5 hash starting with b) = bb0e04ae0d0558a3bc3e58a3bbb48c17
+MD5(This string, designed by Jake, yields an MD5 hash starting with 37) = 3759400ecf3d16a71aa13aaef3896dc1
+MD5(This string, designed by Jake, yields an MD5 hash starting with bd) = bd2c28baa05c2d940ddd7d5d7c4f2851
+MD5(This string, designed by Jake, yields an MD5 hash starting with e7e) = e7e897460a7f7f755fc488803456b385
+MD5(This string, designed by Jake, yields an MD5 hash starting with d9df) = d9df07a7efe33936005e8c95ed83a940
+MD5(This string, designed by Jake, yields an MD5 hash starting with 9662b) = 9662bf746f91a6ae5fbb18968df4fe12
+MD5(This string, designed by Jake, yields an MD5 hash starting with c795d0) = c795d01323f20f6b5d839ec6338e9678
