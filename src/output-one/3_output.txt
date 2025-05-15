@@ -1,0 +1,6 @@
+MD5(Jake's hash = 287919) = 28791943aaaf1e492877e70e45bbe4fa
+MD5(Jake's hash = 92db32) = 92db325369e8b7f516619977240e3960
+MD5(Jake's hash = 251b612) = 251b61256e56a49782b26d8c0c049a69
+MD5(Jake's hash = 427d796) = 427d7961908adefa742562df4cb0384f
+MD5(Jake's hash = 8987fcc) = 8987fcc86cd74f79ddf4bdeafcfefc53
+MD5(Jake's hash = da0e8c5) = da0e8c5b0042d5434a2355a3734734fb

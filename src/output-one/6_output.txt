@@ -1,0 +1,5 @@
+MD5(Jake's self-referential hash: 566e) = 566ed18e1bcacc54f13fad7ca68e1f76
+MD5(Jake's self-referential hash: b8d94) = b8d949580e64b154dd6dfdc643bf7929
+MD5(Jake's self-referential hash: 14ccd0) = 14ccd098514138174b3561f52036f226
+MD5(Jake's self-referential hash: dcd0534) = dcd053459153f169f39387a4ba41cb6b
+MD5(Jake's self-referential hash: da8aeffb) = da8aeffb07c62f758e683f5026faff35

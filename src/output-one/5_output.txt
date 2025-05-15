@@ -1,0 +1,8 @@
+MD5(Jake's self-referential MD5 hash = 1) = 18e70af2e4a911ac238dbba51f4fc975
+MD5(Jake's self-referential MD5 hash = d) = d3f7cf504cded9326b4bab37cbf430aa
+MD5(Jake's self-referential MD5 hash = e) = e15f06cf97677cb3f67a9b63efc5b42a
+MD5(Jake's self-referential MD5 hash = 9a) = 9abbfc46086f31a76c40c342df76336e
+MD5(Jake's self-referential MD5 hash = cd) = cdd925b29fa1fee6e6eda0bd0726a2e1
+MD5(Jake's self-referential MD5 hash = 6d7) = 6d7c7613e74b9e4accbd623c4074ff2a
+MD5(Jake's self-referential MD5 hash = 150fc05) = 150fc057bda771bc0be1c35e1d67a196
+MD5(Jake's self-referential MD5 hash = d0f0370) = d0f037056ca31ab581cad53cff21637f

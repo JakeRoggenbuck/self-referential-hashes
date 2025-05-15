@@ -1,0 +1,15 @@
+MD5(Jake's MD5 hash: d4de9e) = d4de9e41fdb182098527b549ca75345e, and 13950622 hashes checked for thread 0
+MD5(Jake's hash: eac4e9) = eac4e95a7cef70e80ae68d97abd0d377, and 15385833 hashes checked for thread 2
+MD5(Jake's self-referential MD5 hash = 150fc05) = 150fc057bda771bc0be1c35e1d67a196, and 22084613 hashes checked for thread 5
+MD5(Jake's hash = 251b612) = 251b61256e56a49782b26d8c0c049a69, and 38909458 hashes checked for thread 3
+MD5(Jake's MD5 hash = 2556214) = 255621480cdcdfb284af94a309efec6a, and 39150100 hashes checked for thread 1
+MD5(Jake's hash = 427d796) = 427d7961908adefa742562df4cb0384f, and 69719958 hashes checked for thread 3
+MD5(Jake's MD5 hash = 4fde222) = 4fde2223f25e5fb93f46d1379d511b9c, and 83747362 hashes checked for thread 1
+MD5(Jake's hash = 8987fcc) = 8987fcc86cd74f79ddf4bdeafcfefc53, and 144211916 hashes checked for thread 3
+MD5(Jake's self-referential MD5 hash = d0f0370) = d0f037056ca31ab581cad53cff21637f, and 219087728 hashes checked for thread 5
+MD5(Jake's self-referential hash: dcd0534) = dcd053459153f169f39387a4ba41cb6b, and 231540020 hashes checked for thread 6
+MD5(Jake's hash = da0e8c5) = da0e8c5b0042d5434a2355a3734734fb, and 228649157 hashes checked for thread 3
+MD5(Jake's MD5 hash: 163d916b) = 163d916b148bd1b281aa170987ddc8c4, and 373133675 hashes checked for thread 0
+MD5(Jake's MD5 hash = a9f4ee3f) = a9f4ee3f08c06f11014552df01ec67b8, and 2851401279 hashes checked for thread 1
+MD5(Jake's self-referential hash: da8aeffb) = da8aeffb07c62f758e683f5026faff35, and 3666538491 hashes checked for thread 6
+MD5(Jake's MD5 hash = 109e5a72e) = 109e5a72eea4eaa2c1bf94edcecb2fb0, and 4461012782 hashes checked for thread 1

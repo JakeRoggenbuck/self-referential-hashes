@@ -1,0 +1,5 @@
+MD5(Jake's MD5 hash: 23) = 237045df5a610e9d85ddb91481b9f75a
+MD5(Jake's MD5 hash: 26) = 26759c0efe90638bb7608a12235823ee
+MD5(Jake's MD5 hash: 68d) = 68d3fa9e4a120a2a3a1797a6aa9d726a
+MD5(Jake's MD5 hash: 7f61) = 7f61b69ed4b7cadeef091cd226a221f6
+MD5(Jake's MD5 hash: 564b06) = 564b0637638f298dce799e5ef9539086
