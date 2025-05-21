@@ -10,19 +10,22 @@ use std::sync::Mutex;
 
 const BATCH_SIZE: usize = 1000;
 const MAX_DIGITS: usize = 16;
+const DIGITS_PER_PHASE: usize = 4;
 
 struct Progress {
-    current_digit: AtomicUsize,
+    current_phase: AtomicUsize, // Each phase is 4 digits
     found_matches: Mutex<VecDeque<(String, String)>>,
     total_hashes: AtomicUsize,
+    phase_complete: AtomicUsize, // Counter for threads that completed current phase
 }
 
 impl Progress {
     fn new() -> Self {
         Self {
-            current_digit: AtomicUsize::new(1),
+            current_phase: AtomicUsize::new(0),
             found_matches: Mutex::new(VecDeque::new()),
             total_hashes: AtomicUsize::new(0),
+            phase_complete: AtomicUsize::new(0),
         }
     }
 }
@@ -71,40 +74,67 @@ fn run(thread_id: i32, before_string: String, progress: Arc<Progress>) {
     let start_time = Instant::now();
     let mut last_report = Instant::now();
     let report_interval = std::time::Duration::from_secs(5);
+    let num_threads = num_cpus::get() as i64;
 
     loop {
-        let digit_length = progress.current_digit.fetch_add(1, Ordering::SeqCst);
-        if digit_length > MAX_DIGITS {
+        let current_phase = progress.current_phase.load(Ordering::SeqCst);
+        if current_phase * DIGITS_PER_PHASE >= MAX_DIGITS {
             break;
         }
 
-        println!("Thread {} starting work on {}-digit numbers", thread_id, digit_length);
-        
-        let start = if digit_length == 1 { 0 } else { 16i64.pow(digit_length as u32 - 1) };
-        let end = 16i64.pow(digit_length as u32);
-        let total_numbers = end - start;
+        let phase_start = current_phase * DIGITS_PER_PHASE + 1;
+        let phase_end = std::cmp::min((current_phase + 1) * DIGITS_PER_PHASE, MAX_DIGITS);
 
-        // Process ranges directly without collecting them
-        let num_chunks = ((end - start) as usize + BATCH_SIZE - 1) / BATCH_SIZE;
-        
-        (0..num_chunks).into_par_iter().for_each(|chunk_idx| {
-            let chunk_start = start + (chunk_idx as i64 * BATCH_SIZE as i64);
-            let chunk_end = std::cmp::min(chunk_start + BATCH_SIZE as i64, end);
-            process_batch(chunk_start, chunk_end, &before_string, &progress, thread_id);
-        });
+        println!("Thread {} starting work on digits {}-{}", 
+            thread_id, phase_start, phase_end);
 
-        let elapsed = start_time.elapsed();
-        let hashes_per_second = progress.total_hashes.load(Ordering::Relaxed) as f64 / elapsed.as_secs_f64();
-        
-        println!(
-            "Thread {} completed {}-digit numbers ({} hashes) in {:?} ({:.2} hashes/sec)",
-            thread_id, digit_length, total_numbers, elapsed, hashes_per_second
-        );
+        // Process each digit in the current phase
+        for digit_length in phase_start..=phase_end {
+            let start = if digit_length == 1 { 0 } else { 16i64.pow(digit_length as u32 - 1) };
+            let end = 16i64.pow(digit_length as u32);
+            let total_numbers = end - start;
+
+            // Split the range among threads
+            let chunk_size = (total_numbers + num_threads - 1) / num_threads;
+            let thread_start = start + (thread_id as i64 * chunk_size);
+            let thread_end = std::cmp::min(thread_start + chunk_size, end);
+
+            // Process this thread's portion of the range
+            let num_chunks = ((thread_end - thread_start) as usize + BATCH_SIZE - 1) / BATCH_SIZE;
+            
+            (0..num_chunks).into_par_iter().for_each(|chunk_idx| {
+                let chunk_start = thread_start + (chunk_idx as i64 * BATCH_SIZE as i64);
+                let chunk_end = std::cmp::min(chunk_start + BATCH_SIZE as i64, thread_end);
+                process_batch(chunk_start, chunk_end, &before_string, &progress, thread_id);
+            });
+
+            let elapsed = start_time.elapsed();
+            let hashes_per_second = progress.total_hashes.load(Ordering::Relaxed) as f64 / elapsed.as_secs_f64();
+            
+            println!(
+                "Thread {} completed {}-digit numbers ({} hashes) in {:?} ({:.2} hashes/sec)",
+                thread_id, digit_length, thread_end - thread_start, elapsed, hashes_per_second
+            );
+        }
 
         // Write any found matches to file
         if let Ok(mut matches) = progress.found_matches.lock() {
             while let Some((input, result)) = matches.pop_front() {
                 let _ = file.write(format!("MD5({}) = {}\n", input, result).as_bytes());
+            }
+        }
+
+        // Mark this thread as complete for the current phase
+        let completed = progress.phase_complete.fetch_add(1, Ordering::SeqCst) + 1;
+        
+        // If all threads have completed this phase, move to the next phase
+        if completed == num_cpus::get() {
+            progress.current_phase.fetch_add(1, Ordering::SeqCst);
+            progress.phase_complete.store(0, Ordering::SeqCst);
+        } else {
+            // Wait for other threads to complete the phase
+            while progress.current_phase.load(Ordering::SeqCst) == current_phase {
+                std::thread::yield_now();
             }
         }
 
@@ -114,8 +144,8 @@ fn run(thread_id: i32, before_string: String, progress: Arc<Progress>) {
             let elapsed = start_time.elapsed();
             let hashes_per_second = total_hashes as f64 / elapsed.as_secs_f64();
             println!(
-                "Overall progress: {} hashes checked, {:.2} hashes/sec",
-                total_hashes, hashes_per_second
+                "Overall progress: {} hashes checked, {:.2} hashes/sec (Phase {})",
+                total_hashes, hashes_per_second, current_phase + 1
             );
             last_report = Instant::now();
         }
