@@ -99,6 +99,11 @@ fn run(thread_id: i32, before_string: String, progress: Arc<Progress>) {
             let thread_start = start + (thread_id as i64 * chunk_size);
             let thread_end = std::cmp::min(thread_start + chunk_size, end);
 
+            println!(
+                "Thread {} processing {}-digit numbers from {:x} to {:x} ({} numbers)",
+                thread_id, digit_length, thread_start, thread_end - 1, thread_end - thread_start
+            );
+
             // Process this thread's portion of the range
             let num_chunks = ((thread_end - thread_start) as usize + BATCH_SIZE - 1) / BATCH_SIZE;
             
