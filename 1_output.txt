@@ -1,0 +1,4 @@
+MD5(Here's a sentence Jake wrote and its MD5 hash starts with 3e) = 3efba0ab51cfdc84f91ad9a6cc19599f
+MD5(Here's a sentence Jake wrote and its MD5 hash starts with 52) = 5234c6135ca6527fca7a84755d1391bc
+MD5(Here's a sentence Jake wrote and its MD5 hash starts with 70) = 707da28dcf7008ab8978039b80f7b76f
+MD5(Here's a sentence Jake wrote and its MD5 hash starts with c3) = c35ea5ebd45840a05e751219b0dacb37

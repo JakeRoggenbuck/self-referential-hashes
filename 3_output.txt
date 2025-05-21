@@ -1,0 +1,1 @@
+MD5(Here's a sentence Jake wrote and its MD5 hash starts with 991a) = 991ac0f1c92b597036eb196888f69fb4

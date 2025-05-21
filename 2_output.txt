@@ -1,0 +1,1 @@
+MD5(Here's a sentence Jake wrote and its MD5 hash starts with 28f) = 28fe9b5e8f1562150abac1e09b613a71
