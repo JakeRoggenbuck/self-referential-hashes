@@ -4,8 +4,9 @@ use std::io::prelude::*;
 use std::thread;
 use std::sync::atomic::{AtomicUsize, Ordering};
 use std::time::Instant;
+use std::sync::Arc;
 
-fn run(number: i32, before_string: String, current_digit: &AtomicUsize) {
+fn run(number: i32, before_string: String, current_digit: Arc<AtomicUsize>) {
     let mut file = File::create(format!("{}_output.txt", number)).unwrap();
 
     loop {
@@ -64,24 +65,12 @@ fn run(number: i32, before_string: String, current_digit: &AtomicUsize) {
 
 fn main() -> std::io::Result<()> {
     let mut handles = vec![];
-    let current_digit = AtomicUsize::new(1); // Start with 1-digit numbers
-
-    let strings = vec![
-        "Jake wrote this and its MD5 hash happens to start with ",
-        "This message was put together by Jake to get an MD5 hash starting with ",
-        "Jake's sentence ends up with an MD5 hash that begins with ",
-        "The MD5 hash of what Jake wrote starts with ",
-        "Jake came up with this line to get an MD5 hash beginning with ",
-        "This line, written by Jake, gives an MD5 hash that starts with ",
-        "Here's a sentence Jake wrote — its MD5 hash starts with ",
-        "Jake managed to get the MD5 hash of this message to start with ",
-        "This message from Jake has an MD5 hash that starts with ",
-        "Jake put this together so the MD5 hash would begin with ",
-    ];
+    let current_digit = Arc::new(AtomicUsize::new(1)); // Start with 1-digit numbers
+    let target_string = "Here's a sentence Jake wrote and its MD5 hash starts with ".to_string();
 
     for i in 0..7 {
-        let c = strings[i as usize].to_string();
-        let current_digit = &current_digit;
+        let c = target_string.clone();
+        let current_digit = Arc::clone(&current_digit);
 
         let handle = thread::spawn(move || {
             run(i, c, current_digit);
