@@ -85,11 +85,17 @@ fn run(thread_id: i32, before_string: String, progress: Arc<Progress>) {
         let total_numbers = end - start;
 
         // Process in batches for better cache utilization
-        let num_chunks = ((end - start) as usize + BATCH_SIZE - 1) / BATCH_SIZE;
-        
-        (0..num_chunks).into_par_iter().for_each(|chunk_idx| {
-            let chunk_start = start + (chunk_idx as i64 * BATCH_SIZE as i64);
-            let chunk_end = std::cmp::min(chunk_start + BATCH_SIZE as i64, end);
+        let chunks: Vec<_> = (start..end)
+            .collect::<Vec<_>>()
+            .chunks(BATCH_SIZE)
+            .map(|chunk| {
+                let chunk_start = *chunk.first().unwrap();
+                let chunk_end = *chunk.last().unwrap() + 1;
+                (chunk_start, chunk_end)
+            })
+            .collect();
+
+        chunks.par_iter().for_each(|&(chunk_start, chunk_end)| {
             process_batch(chunk_start, chunk_end, &before_string, &progress, thread_id);
         });
 
