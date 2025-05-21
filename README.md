@@ -1,6 +1,8 @@
 # Self Referential Hashes
 [![Rust](https://img.shields.io/badge/Rust-1A5D8A?style=for-the-badge&logo=rust&logoColor=white)](https://github.com/JakeRoggenbuck?tab=repositories&q=&type=&language=rust&sort=stargazers)
 
+Making this private because we found a possible CVE that we will report soon.
+
 #️⃣ This program finds strings that include parts of hashes H, that when hashed, the output hash starts with H.
 
 MD5(`Jake's MD5 hash = 109e5a72e`) = **109e5a72e**ea4eaa2c1bf94edcecb2fb0
