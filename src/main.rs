@@ -52,17 +52,29 @@ fn process_batch(
             batch_results.push((input, hex_result));
         }
     }
+    
+    progress.total_hashes.fetch_add((end - start) as usize, Ordering::Relaxed);
+    
+    if !batch_results.is_empty() {
+        let mut matches = progress.found_matches.lock().unwrap();
+        for (input, result) in batch_results {
+            let input_clone = input.clone();
+            let result_clone = result.clone();
+            matches.push_back((input, result));
+            println!(
+                "Thread {} found match: MD5({}) = {}",
+                thread_id, input_clone, result_clone
+            );
+        }
+    }
 }
 
 fn run(thread_id: i32, before_string: String, progress: Arc<Progress>) {
     let mut file = File::create(format!("{}_output.txt", thread_id)).unwrap();
-<<<<<<< Updated upstream
     let start_time = Instant::now();
     let mut last_report = Instant::now();
     let report_interval = std::time::Duration::from_secs(5);
     let num_threads = num_cpus::get() as i64;
-=======
->>>>>>> Stashed changes
 
     loop {
         let current_phase = progress.current_phase.load(Ordering::SeqCst);
@@ -70,7 +82,6 @@ fn run(thread_id: i32, before_string: String, progress: Arc<Progress>) {
             break;
         }
 
-<<<<<<< Updated upstream
         let phase_start = current_phase * DIGITS_PER_PHASE + 1;
         let phase_end = std::cmp::min((current_phase + 1) * DIGITS_PER_PHASE, MAX_DIGITS);
 
@@ -143,25 +154,6 @@ fn run(thread_id: i32, before_string: String, progress: Arc<Progress>) {
             );
             last_report = Instant::now();
         }
-=======
-        let start = if digit_length == 1 { 0 } else { 16i64.pow(digit_length as u32 - 1) };
-        let end = 16i64.pow(digit_length as u32);
-        let total_numbers = end - start;
-
-        let chunks: Vec<_> = (start..end)
-            .collect::<Vec<_>>()
-            .chunks(BATCH_SIZE)
-            .map(|chunk| {
-                let chunk_start = *chunk.first().unwrap();
-                let chunk_end = *chunk.last().unwrap() + 1;
-                (chunk_start, chunk_end)
-            })
-            .collect();
-
-        chunks.par_iter().for_each(|&(chunk_start, chunk_end)| {
-            process_batch(chunk_start, chunk_end, &before_string, &progress, thread_id);
-        });
->>>>>>> Stashed changes
     }
 }
 
