@@ -13,14 +13,12 @@ const MAX_DIGITS: usize = 16;
 
 struct Progress {
     current_digit: AtomicUsize,
-    total_hashes: AtomicUsize,
 }
 
 impl Progress {
     fn new() -> Self {
         Self {
             current_digit: AtomicUsize::new(1),
-            total_hashes: AtomicUsize::new(0),
         }
     }
 }
